@@ -1,8 +1,9 @@
 class Admin::UsersController < ApplicationController
   before_filter :authenticate_admin!
+  
   def index
-    @admin = current_user
-    redirect_to @admin
+    @admin = current_admin
+    redirect_to admin_user_path(@admin)
   end
   
   def show

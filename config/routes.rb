@@ -1,13 +1,17 @@
 Kasapi::Application.routes.draw do
   devise_for :admins
   namespace :admin do
-    resources:users
+    resources :users
+    resources :campaigns
+    resources :orders
   end
   
   devise_for :users
   resources:users
+  resources :campaigns
+  resources :orders
   
-  root :to => 'users#index'
+  root :to => 'admin/users#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

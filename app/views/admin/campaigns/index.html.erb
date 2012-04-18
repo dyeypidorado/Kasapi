@@ -1,0 +1,24 @@
+<h1> Campaigns</h1>
+<table>
+  <tr>
+    <th>#</th>
+    <th>Campaign Name</th>
+  </tr>
+
+<% count = 0 %>
+<% @campaign.each do |campaign| %>
+  <% count = count + 1%>
+  <tr>
+    <td><%= count %></td>
+    <td><%= campaign.name %></td>
+    <td><%= link_to 'View Orders', admin_campaign_path(campaign) %></td>
+    <td><%= link_to 'Edit', '#' %></td>
+    <td><%= link_to 'Delete', '#' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br/>
+
+<%= link_to 'Create New Campaign', '#' %> | 
+<%= link_to 'Back to Home', admin_users_path %>

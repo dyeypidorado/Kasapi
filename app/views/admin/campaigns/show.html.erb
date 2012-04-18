@@ -1,0 +1,13 @@
+<h1><%= @campaign.name %></h1>
+
+<h2>Details:</h2>
+<p>
+Price: <%= @campaign.price %> <br/>
+Description: <%= @campaign.description %> <br/>
+</p>
+
+<h2>Orders:</h2>
+<p></p>
+
+<%= link_to 'Back to Campaigns', admin_campaigns_path %> | 
+<%= link_to 'Back to Home', admin_users_path %>

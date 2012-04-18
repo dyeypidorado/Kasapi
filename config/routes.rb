@@ -1,7 +1,7 @@
 Kasapi::Application.routes.draw do
   devise_for :admins
   namespace :admin do
-    resources :users
+    resources :users, :only => [:index, :edit, :update]
     resources :campaigns
     resources :orders
   end
